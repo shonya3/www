@@ -104,7 +104,7 @@ async fn main() {
         .max_connections(5)
         .connect(<db-connection-string-here>).await;
 
-	let state = AppState { pool };
+    let state = AppState { pool };
         
     let router = Router::new().route("/", get(hello_world)).with_state(state);
     
